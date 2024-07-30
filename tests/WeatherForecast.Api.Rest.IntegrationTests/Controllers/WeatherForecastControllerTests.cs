@@ -1,7 +1,6 @@
 using System.Net;
 using System.Net.Http.Json;
 using FluentAssertions;
-using WeatherForecast.Api.Rest.IntegrationTests.Infrastructure;
 using WeatherForecast.Application.WeatherForecast.Queries;
 
 namespace WeatherForecast.Api.Rest.IntegrationTests.Controllers;

@@ -9,7 +9,7 @@ using Testcontainers.Redis;
 using WeatherForecast.Api.Rest.IntegrationTests.ApiMocks;
 using WeatherForecast.Infrastructure.ExternalApis.OpenWeather;
 
-namespace WeatherForecast.Api.Rest.IntegrationTests.Infrastructure;
+namespace WeatherForecast.Api.Rest.IntegrationTests;
 
 public class ApplicationFactory : WebApplicationFactory<IApiMarker>, IAsyncLifetime
 {
