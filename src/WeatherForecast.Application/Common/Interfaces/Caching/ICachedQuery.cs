@@ -6,6 +6,4 @@ public interface ICachedQuery
     TimeSpan? Expiration { get; }
 }
 
-public interface ICachedQuery<out TResponse> : IQuery<TResponse>, ICachedQuery
-{
-}
+public interface ICachedQuery<out TResponse> : IQuery<TResponse>, ICachedQuery;

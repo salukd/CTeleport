@@ -1,6 +1,8 @@
-@WeatherForecast.Api.Rest_HostAddress = http://localhost:5013
 
-GET {{WeatherForecast.Api.Rest_HostAddress}}/weatherforecast/
-Accept: application/json
+### Get Weather Forecast for London (Current Date)
+GET http://localhost:5013/api/v1/weatherforecast?city=london&date=
+accept: text/plain
 
-###
+### Get Weather Forecast for London (Specific Date)
+GET http://localhost:5013/api/v1/weatherforecast?city=london&date=2024-07-30
+accept: text/plain

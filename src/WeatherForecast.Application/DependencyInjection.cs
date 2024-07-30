@@ -1,10 +1,6 @@
-using FluentValidation;
-using Microsoft.Extensions.DependencyInjection;
-using WeatherForecast.Application.Common.Behaviours;
-
 namespace WeatherForecast.Application;
 
-public static  class DependencyInjection
+public static class DependencyInjection
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
@@ -21,5 +17,4 @@ public static  class DependencyInjection
 
         return services;
     }
-    
 }

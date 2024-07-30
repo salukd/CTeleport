@@ -21,8 +21,7 @@
 
     <ItemGroup>
       <Folder Include="Common\Interfaces\" />
-      <Folder Include="WeatherForcast\Commands\" />
-      <Folder Include="WeatherForcast\Queries\" />
+      <Folder Include="WeatherForecast\Commands\" />
     </ItemGroup>
     
 

@@ -1,0 +1,14 @@
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using System.Text.Json.Serialization;
+global using WeatherForecast.Application.Common.Exceptions;
+global using MediatR;
+global using Microsoft.AspNetCore.Mvc;
+global using Asp.Versioning;
+global using Swashbuckle.AspNetCore.Annotations;
+global using WeatherForecast.Application.WeatherForecast.Queries;
+global using Microsoft.AspNetCore.Diagnostics;
+global using Hellang.Middleware.ProblemDetails;
+global using WeatherForecast.Api.Rest;
+global using WeatherForecast.Application;
+global using WeatherForecast.Infrastructure;

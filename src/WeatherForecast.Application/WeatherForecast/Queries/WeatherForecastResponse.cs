@@ -1,0 +1,3 @@
+namespace WeatherForecast.Application.WeatherForecast.Queries;
+
+public class WeatherForecastResponse : OpenWeatherForecastResponse;

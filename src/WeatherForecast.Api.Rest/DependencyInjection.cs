@@ -1,10 +1,6 @@
-using System.Text.Json.Serialization;
-using Asp.Versioning;
-using Microsoft.AspNetCore.Mvc;
-using Hellang.Middleware.ProblemDetails;
+using WeatherForecast.Api.Rest.ExceptionHandlers;
 
 namespace WeatherForecast.Api.Rest;
-
 
 public static class DependencyInjection
 {
@@ -18,12 +14,12 @@ public static class DependencyInjection
 
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
-        
+
         services.AddExceptionHandler<CustomExceptionHandler>();
-        
+
         services.Configure<ApiBehaviorOptions>(options =>
             options.SuppressModelStateInvalidFilter = true);
-        
+
         services.AddEndpointsApiExplorer();
         services.AddProblemDetails(setup => { setup.IncludeExceptionDetails = (ctx, env) => false; });
         services.Configure<RouteOptions>(options => { options.LowercaseUrls = true; });
