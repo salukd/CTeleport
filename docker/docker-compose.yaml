@@ -1,0 +1,39 @@
+services:
+  weatherforecast-api:
+    build:
+      context: ..
+      dockerfile: src/WeatherForecast.Api.Rest/Dockerfile
+      args:
+        BUILD_CONFIGURATION: Development
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - Redis__ConnectionString=redis:6379,abortConnect=false
+    depends_on:
+      redis:
+        condition: service_healthy
+    networks:
+      - weatherforecast-network
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - weatherforecast-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+networks:
+  weatherforecast-network:
+    driver: bridge
+
+volumes:
+  redis-data:
