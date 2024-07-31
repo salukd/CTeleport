@@ -36,6 +36,6 @@ public static class DependencyInjection
     {
         services.AddSingleton<ICacheService, CacheService>();
         services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(
-            configuration.GetSection("Redis:ConnectionString").Value!));
+            configuration.GetConnectionString("Cache")!));
     }
 }

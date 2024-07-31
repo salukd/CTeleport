@@ -19,7 +19,6 @@ public class ApplicationFactory : WebApplicationFactory<IApiMarker>, IAsyncLifet
         .WithImage("redis:7.0")
         .Build();
     
-
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         var currentEnv = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
@@ -44,7 +43,7 @@ public class ApplicationFactory : WebApplicationFactory<IApiMarker>, IAsyncLifet
         {
             config.AddInMemoryCollection(new Dictionary<string, string>
             {
-                { "Redis:ConnectionString", _redisContainer.GetConnectionString() }
+                { "ConnectionStrings:Cache", _redisContainer.GetConnectionString() }
             }!);
         });
     }

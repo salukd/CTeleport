@@ -12,3 +12,7 @@ global using Hellang.Middleware.ProblemDetails;
 global using WeatherForecast.Api.Rest;
 global using WeatherForecast.Application;
 global using WeatherForecast.Infrastructure;
+global using Microsoft.OpenApi.Models;
+global using Swashbuckle.AspNetCore.SwaggerGen;
+global using Microsoft.Extensions.Diagnostics.HealthChecks;
+global using WeatherForecast.Infrastructure.ExternalApis.OpenWeather;
