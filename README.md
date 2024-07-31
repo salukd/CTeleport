@@ -10,6 +10,10 @@ The Weather Forecast Service is an ASP.NET Core Web API that provides weather fo
 - Cache results in Redis to improve response times and reduce API usage
 - Health checks for both the OpenWeatherMap API and Redis connection
 - Error handling for various scenarios (city not found, API key issues, rate limiting, etc.)
+- Resilience patterns implemented using Polly:
+  - Rate Limiting
+  - Circuit Breaker
+  - Retry Policies
 
 ## Technologies and Libraries Used
 
@@ -22,6 +26,7 @@ The Weather Forecast Service is an ASP.NET Core Web API that provides weather fo
 - Polly (for resilience and transient fault handling)
 - FluentValidation (for input validation)
 - Mediatr
+- Polly (for resilience and transient fault handling)
 
 ## Prerequisites
 
