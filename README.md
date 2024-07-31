@@ -64,7 +64,7 @@ The Weather Forecast Service is an ASP.NET Core Web API that provides weather fo
    docker-compose up --build
    ```
 
-2. The API will be available at `http://localhost:5013/swagger/index.html`.
+2. The API will be available at `http://localhost:8080/swagger/index.html`.
 
 ### Using .NET CLI
 
